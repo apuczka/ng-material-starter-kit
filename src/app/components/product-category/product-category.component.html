@@ -2,17 +2,22 @@
 
   <mat-card-title>Select category</mat-card-title>
 
-  <mat-card-content>
-    <mat-selection-list role="list">
+  <mat-card-content >
+    <mat-selection-list *ngIf="category$ | async as category ; then empty else loader" role="list">
       <mat-list-option role="listitem" *ngFor="let item of category$ | async">{{item}}</mat-list-option>
     </mat-selection-list>
 
   </mat-card-content>
 
 </mat-card>
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+
+<ng-template #loader><div class="loader"></div></ng-template>
+<ng-template #empty><img src="../../../assets/no-data.jpg"></ng-template>
+
+
+<!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item *ngFor="let item of category$ | async">
   {{item}}
 </button>
-</mat-menu>
+</mat-menu> -->
