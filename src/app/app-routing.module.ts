@@ -8,6 +8,7 @@ import { TableNamesComponent } from './components/table-names/table-names.compon
 import { CryptoComponent } from './components/crypto/crypto.component';
 import { MultiTableComponent } from './components/multi-table/multi-table.component';
 import { MultiCryptoComponent } from './components/multi-crypto/multi-crypto.component';
+import { JobPostComponent } from './components/job-post/job-post.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { ProductCategoryComponentModule } from './components/product-category/product-category.component-module';
@@ -18,6 +19,7 @@ import { TableNamesComponentModule } from './components/table-names/table-names.
 import { CryptoComponentModule } from './components/crypto/crypto.component-module';
 import { MultiTableComponentModule } from './components/multi-table/multi-table.component-module';
 import { MultiCryptoComponentModule } from './components/multi-crypto/multi-crypto.component-module';
+import { JobPostComponentModule } from './components/job-post/job-post.component-module';
 
 @NgModule(
   {
@@ -30,8 +32,9 @@ import { MultiCryptoComponentModule } from './components/multi-crypto/multi-cryp
         { path: 'table-names', component: TableNamesComponent },
         { path: 'crypto', component: CryptoComponent },
         { path: 'multi-table', component: MultiTableComponent },
-        { path: 'multi-crypto', component: MultiCryptoComponent }
-      ]), ProductListComponentModule, ProductsServiceModule, ProductCategoryComponentModule, CategoryServiceModule, SingleRadioComponentModule, HolidaysComponentModule, TableNamesComponentModule, CryptoComponentModule, MultiTableComponentModule, MultiCryptoComponentModule],
+        { path: 'multi-crypto', component: MultiCryptoComponent },
+        { path: 'job-post', component: JobPostComponent }
+      ]), ProductListComponentModule, ProductsServiceModule, ProductCategoryComponentModule, CategoryServiceModule, SingleRadioComponentModule, HolidaysComponentModule, TableNamesComponentModule, CryptoComponentModule, MultiTableComponentModule, MultiCryptoComponentModule, JobPostComponentModule],
     exports: [RouterModule]
   })
 export class AppRoutingModule { }

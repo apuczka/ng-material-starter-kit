@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { CryptoModel } from '../../models/crypto.model';
 import { CryptoService } from '../../services/crypto.service';
 
@@ -12,7 +12,7 @@ import { CryptoService } from '../../services/crypto.service';
 })
 export class CryptoComponent {
   readonly crypto$: Observable<CryptoModel[]> = 
-  this._cryptoService.getAll() ;
+  this._cryptoService.getAll();
 
   constructor(private _cryptoService: CryptoService) {
   }

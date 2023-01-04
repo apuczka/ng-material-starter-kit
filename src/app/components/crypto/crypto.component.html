@@ -1,10 +1,17 @@
+<h1>Crypto chips</h1>
 
-<h1 >Crypto chips</h1>
+<mat-chip-list *ngIf="crypto$ | async as crypto; else loader" aria-label="Fish selection">
+  <ng-container *ngIf="crypto.length > 0; else empty">
 
-<mat-chip-list *ngIf="crypto$ | async as crypto; then empty else loader" aria-label="Fish selection">
-  <mat-chip  *ngFor="let item of crypto$ | async">
- {{item.symbol}}
-</mat-chip>
+  </ng-container>
+  <mat-chip *ngFor="let item of crypto$ | async">
+    {{item.symbol}}
+  </mat-chip>
 </mat-chip-list>
-<ng-template #loader ><div class="loader"></div></ng-template>
-<ng-template #empty ><div>Oops! There is no data</div></ng-template>
+<ng-template #loader>
+  <mat-progress-bar class="example-margin" [color]="'primary'" [mode]="'indeterminate'" [value]="50">
+  </mat-progress-bar>
+</ng-template>
+<ng-template #empty>
+  Oops! There is no data
+</ng-template>
