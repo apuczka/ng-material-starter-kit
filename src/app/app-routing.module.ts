@@ -6,6 +6,7 @@ import { SingleRadioComponent } from './components/single-radio/single-radio.com
 import { HolidaysComponent } from './components/holidays/holidays.component';
 import { TableNamesComponent } from './components/table-names/table-names.component';
 import { CryptoComponent } from './components/crypto/crypto.component';
+import { MultiTableComponent } from './components/multi-table/multi-table.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { ProductCategoryComponentModule } from './components/product-category/product-category.component-module';
@@ -14,6 +15,7 @@ import { SingleRadioComponentModule } from './components/single-radio/single-rad
 import { HolidaysComponentModule } from './components/holidays/holidays.component-module';
 import { TableNamesComponentModule } from './components/table-names/table-names.component-module';
 import { CryptoComponentModule } from './components/crypto/crypto.component-module';
+import { MultiTableComponentModule } from './components/multi-table/multi-table.component-module';
 
 @NgModule(
   {
@@ -24,8 +26,9 @@ import { CryptoComponentModule } from './components/crypto/crypto.component-modu
         { path: 'single-radio', component: SingleRadioComponent },
         { path: 'holidays', component: HolidaysComponent },
         { path: 'table-names', component: TableNamesComponent },
-        { path: 'crypto', component: CryptoComponent }
-      ]), ProductListComponentModule, ProductsServiceModule, ProductCategoryComponentModule, CategoryServiceModule, SingleRadioComponentModule, HolidaysComponentModule, TableNamesComponentModule, CryptoComponentModule],
+        { path: 'crypto', component: CryptoComponent },
+        { path: 'multi-table', component: MultiTableComponent }
+      ]), ProductListComponentModule, ProductsServiceModule, ProductCategoryComponentModule, CategoryServiceModule, SingleRadioComponentModule, HolidaysComponentModule, TableNamesComponentModule, CryptoComponentModule, MultiTableComponentModule],
     exports: [RouterModule]
   })
 export class AppRoutingModule { }
