@@ -4,7 +4,8 @@
 
   <mat-card-content >
     <mat-selection-list *ngIf="category$ | async as category ; then empty else loader" role="list">
-      <mat-list-option role="listitem" *ngFor="let item of category$ | async">{{item}}</mat-list-option>
+      <mat-list-option role="listitem" *ngFor="let item of category$ | async">
+        {{item}}</mat-list-option>
     </mat-selection-list>
 
   </mat-card-content>
