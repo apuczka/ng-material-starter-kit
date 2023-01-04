@@ -1,0 +1,10 @@
+
+<h1 >Crypto chips</h1>
+
+<mat-chip-list *ngIf="crypto$ | async as crypto; then loader else empty" aria-label="Fish selection">
+  <mat-chip  *ngFor="let item of crypto$ | async">
+ {{item.symbol}}
+</mat-chip>
+</mat-chip-list>
+<ng-template #loader ><div class="loader"></div></ng-template>
+<ng-template #empty ><div>Oops! There is no data</div></ng-template>
