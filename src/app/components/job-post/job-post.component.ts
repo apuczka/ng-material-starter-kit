@@ -12,6 +12,7 @@ import { JobPostService } from '../../services/job-post.service';
 })
 export class JobPostComponent {
   readonly job$: Observable<JobPostModel[]> = this._jobPostService.getAll();
+  readonly title$: Observable<JobPostModel[]> = this._jobPostService.getOne();
 
   constructor(private _jobPostService: JobPostService) {
   }

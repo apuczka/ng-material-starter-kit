@@ -9,6 +9,10 @@ export class JobPostService {
   }
 
   getAll(): Observable<JobPostModel[]> {
-    return this._httpClient.get<JobPostModel[]>('https://636ce2d8ab4814f2b2712854.mockapi.io/job-tags');
+    return this._httpClient.get<JobPostModel[]>('https://636ce2d8ab4814f2b2712854.mockapi.io/job-posts');
+  }
+
+  getOne(): Observable<JobPostModel[]> {
+    return this._httpClient.get<JobPostModel[]>("https://636ce2d8ab4814f2b2712854.mockapi.io/job-tags");
   }
 }
