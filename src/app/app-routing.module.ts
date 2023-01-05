@@ -10,6 +10,7 @@ import { MultiTableComponent } from './components/multi-table/multi-table.compon
 import { MultiCryptoComponent } from './components/multi-crypto/multi-crypto.component';
 import { JobPostComponent } from './components/job-post/job-post.component';
 import { MultiGridComponent } from './components/multi-grid/multi-grid.component';
+import { InfluancersComponent } from './components/influancers/influancers.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { ProductCategoryComponentModule } from './components/product-category/product-category.component-module';
@@ -22,6 +23,7 @@ import { MultiTableComponentModule } from './components/multi-table/multi-table.
 import { MultiCryptoComponentModule } from './components/multi-crypto/multi-crypto.component-module';
 import { JobPostComponentModule } from './components/job-post/job-post.component-module';
 import { MultiGridComponentModule } from './components/multi-grid/multi-grid.component-module';
+import { InfluancersComponentModule } from './components/influancers/influancers.component-module';
 
 @NgModule(
   {
@@ -36,8 +38,9 @@ import { MultiGridComponentModule } from './components/multi-grid/multi-grid.com
         { path: 'multi-table', component: MultiTableComponent },
         { path: 'multi-crypto', component: MultiCryptoComponent },
         { path: 'job-post', component: JobPostComponent },
-        { path: 'multi-grid', component: MultiGridComponent }
-      ]), ProductListComponentModule, ProductsServiceModule, ProductCategoryComponentModule, CategoryServiceModule, SingleRadioComponentModule, HolidaysComponentModule, TableNamesComponentModule, CryptoComponentModule, MultiTableComponentModule, MultiCryptoComponentModule, JobPostComponentModule, MultiGridComponentModule],
+        { path: 'multi-grid', component: MultiGridComponent },
+        { path: 'influancers', component: InfluancersComponent }
+      ]), ProductListComponentModule, ProductsServiceModule, ProductCategoryComponentModule, CategoryServiceModule, SingleRadioComponentModule, HolidaysComponentModule, TableNamesComponentModule, CryptoComponentModule, MultiTableComponentModule, MultiCryptoComponentModule, JobPostComponentModule, MultiGridComponentModule, InfluancersComponentModule],
     exports: [RouterModule]
   })
 export class AppRoutingModule { }
