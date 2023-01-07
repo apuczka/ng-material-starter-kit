@@ -1,20 +1,32 @@
  <ng-container *ngIf="job$ | async as list">
-      <table mat-table [dataSource]="list" class="mat-elevation-z8">         <!-- Column 1 -->
+      <table mat-table [dataSource]="list" class="mat-elevation-z8">         
+        
+        <!-- Column 1 -->
+        
         <ng-container matColumnDef="column1">
-          <th mat-header-cell *matHeaderCellDef> Title </th>
+          <th mat-header-cell *matHeaderCellDef> column1 </th>
           <td mat-cell *matCellDef="let element"> {{ element.title }} </td>
         </ng-container>
+
         <!-- Column 2 -->
         <ng-container matColumnDef="column2">
-          <th mat-header-cell *matHeaderCellDef> description </th>
+          <th mat-header-cell *matHeaderCellDef> column2 </th>
           <td mat-cell *matCellDef="let element"> {{element.description}} </td>
-        </ng-container>
-        <ng-container matColumnDef="column3">
-          <th mat-header-cell *matHeaderCellDef> Tags </th>
-          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-        </ng-container>
+        </ng-container>.
 
-        <tr mat-header-row *matHeaderRowDef="['column1', 'column2','column3']"></tr>
-        <tr mat-row *matRowDef="let row; columns: ['column1', 'column2','column3'];"></tr>  
+          <!-- Column 3 -->
+        
+          
+        <ng-container  matColumnDef="column3">  
+          <th mat-header-cell *matHeaderCellDef > Tags </th>
+          <td mat-cell *matCellDef="let item"> {{ item.id }} </td>
+        </ng-container>
+             <tr mat-header-row *matHeaderRowDef="['column1', 'column2', 'column3']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['column1', 'column2', 'column3'];"></tr>  
       </table>
+    </ng-container>
+
+    <ng-container *ngIf="tags$ | async as list" matColumnDef="column3">
+      <th mat-header-cell *matHeaderCellDef> Tags </th>
+      <td mat-cell *matCellDef="let item"> {{item.name}} </td>
     </ng-container>

@@ -3,4 +3,5 @@ export interface JobPostModel {
   readonly description: string;
   readonly tags: string;
   readonly name: string;
+  readonly id: number;
 }

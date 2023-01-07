@@ -13,7 +13,6 @@ import { MultiGridService } from '../../services/multi-grid.service';
 })
 export class InfluancersComponent {
   readonly influencers$: Observable<InfluacersModel[]> = this._influancersService.getAll();
-  readonly follow$: Observable<InfluacersModel[]> = this._influancersService.getAll();
 
   constructor(private _influancersService: InfluancersService, private _multiGridService: MultiGridService) {
   }

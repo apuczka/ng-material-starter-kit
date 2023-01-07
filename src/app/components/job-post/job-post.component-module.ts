@@ -6,10 +6,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
+import { MatListModule } from '@angular/material/list';
 import { JobPostComponent } from './job-post.component';
 
 @NgModule({
-  imports: [MatButtonToggleModule, MatExpansionModule, CommonModule, MatGridListModule, MatStepperModule, MatButtonModule, MatTableModule],
+  imports: [MatButtonToggleModule, MatExpansionModule, CommonModule, MatGridListModule, MatStepperModule, MatButtonModule, MatTableModule, MatListModule],
   declarations: [JobPostComponent],
   providers: [],
   exports: [JobPostComponent]
