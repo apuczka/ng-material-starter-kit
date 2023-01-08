@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
 import { Observable } from 'rxjs';
 import { InfluacersModel } from '../../models/influacers.model';
 import { InfluancersService } from '../../services/influancers.service';
-import { MultiGridService } from '../../services/multi-grid.service';
 
 @Component({
   selector: 'app-influancers',
@@ -12,8 +11,8 @@ import { MultiGridService } from '../../services/multi-grid.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InfluancersComponent {
-  readonly influencers$: Observable<InfluacersModel[]> = this._influancersService.getAll();
+  readonly influancers$: Observable<InfluacersModel[]> = this._influancersService.getAll();
 
-  constructor(private _influancersService: InfluancersService, private _multiGridService: MultiGridService) {
+  constructor(private _influancersService: InfluancersService) {
   }
 }
